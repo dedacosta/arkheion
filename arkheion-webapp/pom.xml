@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>arkheion-webapp-discovery</module>
+        <module>arkheion-webapp-gateway</module>
         <module>arkheion-webapp-backend</module>
         <module>arkheion-webapp-frontend</module>
     </modules>

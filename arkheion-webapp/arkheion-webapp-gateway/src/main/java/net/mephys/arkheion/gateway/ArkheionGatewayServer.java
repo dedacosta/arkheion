@@ -1,14 +1,14 @@
-package net.mephys.arkheion;
+package net.mephys.arkheion.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableAsync;
+
 
 @SpringBootApplication
-public class ArkheionApplication {
+public class ArkheionGatewayServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(ArkheionApplication.class, args);
+        SpringApplication.run(ArkheionGatewayServer.class, args);
     }
 
 }

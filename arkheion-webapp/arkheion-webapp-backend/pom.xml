@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
     <properties>
         <!-- The main class to start by executing "java -jar" -->
-        <start-class>net.mephys.arkheion.ArkheionEurekaServer</start-class>
+        <start-class>net.mephys.arkheion.gateway.ArkheionEurekaServer</start-class>
     </properties>
     <dependencies>
         <dependency>
@@ -60,6 +60,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
