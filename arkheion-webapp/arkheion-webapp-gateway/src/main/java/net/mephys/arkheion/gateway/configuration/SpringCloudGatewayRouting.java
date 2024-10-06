@@ -10,7 +10,7 @@ public class SpringCloudGatewayRouting {
     @Bean
     public RouteLocator configureRoute(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("api", r->r.path("/arkheion/api**").uri("lb://BACKEND")) //static routing
+                .route("backend", r->r.path("/backend/**").uri("lb://BACKEND")) //static routing
                 .route("fronten", r->r.path("/arkheion/**").uri("lb://FRONTEND")) //dynamic routing
                 .build();
     }

@@ -1,0 +1,3 @@
+[submodule "arkheion-frontend/jsonforms-react-seed"]
+	path = arkheion-frontend/jsonforms-react-seed
+	url = https://github.com/eclipsesource/jsonforms-react-seed.git

@@ -3,6 +3,7 @@ package net.mephys.arkheion.api.controller;
 import net.mephys.arkheion.api.dto.BookDTO;
 import net.mephys.arkheion.api.model.Book;
 import net.mephys.arkheion.api.service.BookService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,8 @@ public class BookController {
     }
 
     @PostMapping("book")
+    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseBody
     public Book postBook(BookDTO bookDTO) {
         Book book = new Book();
         book.setBookId(bookDTO.getBookId());

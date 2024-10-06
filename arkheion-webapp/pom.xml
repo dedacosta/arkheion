@@ -10,10 +10,14 @@
     </parent>
     <artifactId>arkheion-webapp</artifactId>
     <packaging>pom</packaging>
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+    </properties>
     <modules>
         <module>arkheion-webapp-discovery</module>
         <module>arkheion-webapp-gateway</module>
         <module>arkheion-webapp-backend</module>
-        <module>arkheion-webapp-frontend</module>
     </modules>
 </project>

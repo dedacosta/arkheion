@@ -11,13 +11,20 @@
     <artifactId>arkheion-webapp-discovery</artifactId>
     <packaging>jar</packaging>
     <dependencies>
+        <!-- Spring Boot Starter -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
+
+        <!-- Eureka Server Starter -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
     <build>

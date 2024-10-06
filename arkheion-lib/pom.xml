@@ -13,5 +13,6 @@
     <modules>
         <module>arkheion-lib-api</module>
         <module>arkheion-lib-common</module>
+        <module>arkheion-xml-db</module>
     </modules>
 </project>
