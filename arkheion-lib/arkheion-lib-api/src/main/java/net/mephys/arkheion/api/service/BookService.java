@@ -9,16 +9,16 @@ import java.util.List;
 public interface BookService {
 
     // CREATE
-    public Book createBook(Book book);
+    Book createBook(Book book);
 
     // READ All
-    public List<Book> getBooks();
+    List<Book> getBooks();
 
     // READ
-    public Book getBook(Integer id);
+    Book getBook(Integer id);
 
     // DELETE
-    public void deleteBook(Integer bookId);
+    void deleteBook(Integer bookId);
 
-    public Book updateBook(Integer id, Book bookDetails);
+    Book updateBook(Integer id, Book bookDetails);
 }
