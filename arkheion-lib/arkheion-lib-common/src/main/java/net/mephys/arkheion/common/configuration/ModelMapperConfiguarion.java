@@ -13,14 +13,14 @@ import java.util.List;
 @Configuration
 public class ModelMapperConfiguarion {
 
-    private final Converter<List<String>, String> LIST_TO_STRING_CONVERTER = new AbstractConverter<List<String>, String>() {
+    private final Converter<List<String>, String> LIST_TO_STRING_CONVERTER = new AbstractConverter<>() {
         @Override
         protected String convert(List<String> strings) {
             return strings == null ? null : String.join("; ", strings);
         }
     };
 
-    private final Converter<String, List<String>> STRING_TO_LIST_CONVERTER = new AbstractConverter<String, List<String>>() {
+    private final Converter<String, List<String>> STRING_TO_LIST_CONVERTER = new AbstractConverter<>() {
         @Override
         protected List<String> convert(String string) {
             return string == null ? null : Arrays.asList(string.split(";\\s*"));

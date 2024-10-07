@@ -58,27 +58,4 @@ public class BookCatalogServiceImpl implements BookCatalogService {
         catalog.deleteAll();
     }
 
-
-    // UPDATE
-    public void updateBook(Integer bookId, Book bookDetails) {
-       // catalog.updateItem(bookId, bookDetails);
-    }
-
-    // Export XML
-    public String exportXML() {
-        try {
-            return objectMapper.writeValueAsString(getBooks());
-        } catch (JsonProcessingException e) {
-            return "";
-        }
-    }
-
-    // Import XML
-    public void importXML(String xml) {
-        try {
-            List<Book> books = objectMapper.readValue(xml, new TypeReference<List<Book>>() {
-            });
-        } catch (JsonProcessingException e) {
-        }
-    }
 }

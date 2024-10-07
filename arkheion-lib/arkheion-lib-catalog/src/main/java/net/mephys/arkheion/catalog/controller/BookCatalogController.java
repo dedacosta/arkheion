@@ -27,10 +27,9 @@ public class BookCatalogController {
     @GetMapping(path = "books", produces = "application/json")
     public List<BookResponseDTO> getBooks() {
         List<Book> books = bookCatalogService.getBooks();
-        List<BookResponseDTO> bookResponseDTOList = books.stream()
+        return books.stream()
                 .map(book -> modelMapper.map(book, BookResponseDTO.class))
                 .toList();
-        return bookResponseDTOList;
     }
 
     @GetMapping(path = "books/raw", produces = "application/json")
@@ -60,7 +59,7 @@ public class BookCatalogController {
     @PostMapping(path = "books")
     @ResponseStatus(HttpStatus.CREATED)
     public void importBooks(@RequestBody List<BookDTO> books) {
-        books.stream().forEach(bookDTO -> {
+        books.forEach(bookDTO -> {
             if (bookDTO != null && !bookDTO.getTitle().isEmpty()) {
                 Book book = modelMapper.map(bookDTO, Book.class);
                 bookCatalogService.insert(book);

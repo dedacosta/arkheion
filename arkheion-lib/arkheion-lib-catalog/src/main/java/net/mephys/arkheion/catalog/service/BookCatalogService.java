@@ -7,20 +7,18 @@ import java.util.List;
 public interface BookCatalogService {
 
     // CREATE
-    public void insert(Book book);
+    void insert(Book book);
 
     // READ All
-    public List<Book> getBooks();
+    List<Book> getBooks();
 
     // READ
-    public Book getBook(Integer id);
+    Book getBook(Integer id);
 
     // DELETE
-    public void deleteBook(Integer bookId);
+    void deleteBook(Integer bookId);
 
     // DELETE
-    public void deleteAllBook();
-
-    public void updateBook(Integer bookId, Book bookDetails);
+    void deleteAllBook();
 
 }
