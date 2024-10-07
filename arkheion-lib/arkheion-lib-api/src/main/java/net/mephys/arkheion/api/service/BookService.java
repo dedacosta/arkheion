@@ -1,8 +1,6 @@
 package net.mephys.arkheion.api.service;
 
 import net.mephys.arkheion.api.model.Book;
-import net.mephys.arkheion.api.repository.BookRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
