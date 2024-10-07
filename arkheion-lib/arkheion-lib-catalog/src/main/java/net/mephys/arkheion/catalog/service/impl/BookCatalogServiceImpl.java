@@ -1,36 +1,39 @@
-package net.mephys.arkheion.xml.db.service.impl;
+package net.mephys.arkheion.catalog.service.impl;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.mephys.arkheion.xml.db.component.XmlDatabase;
-import net.mephys.arkheion.xml.db.model.BaseItem;
-import net.mephys.arkheion.xml.db.model.Book;
-import net.mephys.arkheion.xml.db.service.XmlBookService;
+import net.mephys.arkheion.catalog.component.Catalog;
+import net.mephys.arkheion.catalog.model.CatalogBaseItem;
+import net.mephys.arkheion.catalog.model.Book;
+import net.mephys.arkheion.catalog.service.BookCatalogService;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class XmlBookServiceImpl implements XmlBookService {
+public class BookCatalogServiceImpl implements BookCatalogService {
 
-    private final XmlDatabase xmlDatabase;
+    private final Catalog catalog;
     private final ObjectMapper objectMapper;
+    private final ModelMapper modelMapper;
 
-    public XmlBookServiceImpl(XmlDatabase xmlDatabase, ObjectMapper objectMapper) {
-        this.xmlDatabase = xmlDatabase;
+    public BookCatalogServiceImpl(Catalog catalog, ObjectMapper objectMapper, ModelMapper modelMapper) {
+        this.catalog = catalog;
         this.objectMapper = objectMapper;
+        this.modelMapper = modelMapper;
     }
 
     // CREATE
     public void insert(Book book) {
-        xmlDatabase.insert(book);
+        catalog.insert(book);
     }
 
     // READ All
     public List<Book> getBooks() {
-        List<BaseItem> items = xmlDatabase.getDatabase();
+        List<CatalogBaseItem> items = catalog.getDatabase();
         return items.stream()
                 .filter(it -> it instanceof Book)
                 .map(it -> (Book) it)
@@ -39,7 +42,7 @@ public class XmlBookServiceImpl implements XmlBookService {
 
     // READ
     public Book getBook(Integer bookId) {
-        BaseItem item = xmlDatabase.getItemById(bookId);
+        CatalogBaseItem item = catalog.getItemById(bookId);
         if (item instanceof Book book)
             return book;
         else return null;
@@ -47,18 +50,18 @@ public class XmlBookServiceImpl implements XmlBookService {
 
     // DELETE
     public void deleteBook(Integer bookId) {
-        xmlDatabase.deleteItem(bookId);
+        catalog.deleteItem(bookId);
     }
 
     // DELETE
     public void deleteAllBook(){
-        xmlDatabase.deleteAll();
+        catalog.deleteAll();
     }
 
 
     // UPDATE
     public void updateBook(Integer bookId, Book bookDetails) {
-        xmlDatabase.updateItem(bookId, bookDetails);
+       // catalog.updateItem(bookId, bookDetails);
     }
 
     // Export XML

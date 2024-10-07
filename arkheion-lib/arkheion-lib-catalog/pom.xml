@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>arkheion-xml-db</artifactId>
+    <artifactId>arkheion-lib-catalog</artifactId>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>

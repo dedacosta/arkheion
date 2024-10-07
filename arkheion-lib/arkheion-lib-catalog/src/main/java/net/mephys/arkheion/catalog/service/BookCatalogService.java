@@ -1,10 +1,10 @@
-package net.mephys.arkheion.xml.db.service;
+package net.mephys.arkheion.catalog.service;
 
-import net.mephys.arkheion.xml.db.model.Book;
+import net.mephys.arkheion.catalog.model.Book;
 
 import java.util.List;
 
-public interface XmlBookService {
+public interface BookCatalogService {
 
     // CREATE
     public void insert(Book book);

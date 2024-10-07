@@ -27,7 +27,7 @@
 <!--            </dependency>-->
             <dependency>
                 <groupId>net.mephys</groupId>
-                <artifactId>arkheion-xml-db</artifactId>
+                <artifactId>arkheion-lib-catalog</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
@@ -36,16 +36,6 @@
                 <version>${h2.version}</version>
                 <scope>test</scope>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.fasterxml.jackson.dataformat</groupId>-->
-<!--                <artifactId>jackson-dataformat-xml</artifactId>-->
-<!--                <version>${jackson.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.fasterxml.jackson.datatype</groupId>-->
-<!--                <artifactId>jackson-datatype-jsr310</artifactId>-->
-<!--                <version>${jackson.version}</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.modelmapper</groupId>
                 <artifactId>modelmapper</artifactId>
