@@ -1,7 +1,6 @@
 package net.mephys.arkheion.api.model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

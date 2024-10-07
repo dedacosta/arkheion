@@ -1,7 +1,6 @@
 package net.mephys.arkheion.api.dto;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
